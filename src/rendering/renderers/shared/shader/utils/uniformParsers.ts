@@ -149,13 +149,16 @@ export const uniformParsers: UniformParserDefinition[] = [
         `
     },
     {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        // eslint-disable-next-line no-constant-binary-expression
         type: 'sampler2D' || 'samplerCube' || 'sampler2DArray',
         test: (data: UniformData): boolean =>
             // eslint-disable-next-line max-len,no-eq-null,eqeqeq
             (data.type === 'sampler2D' || data.type === 'samplerCube' || data.type === 'sampler2DArray') && data.size === 1 && (data.value == null || (data.value as any).source !== undefined),
         uniform: `
             t = syncData.textureCount++;
-          
+
             cv = ud[name].value;
             v = uv[name];
 

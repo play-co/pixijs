@@ -31,7 +31,7 @@ export type UniformGroupOptions = {
     /** if true, then you are responsible for when the data is uploaded to the GPU by calling `update()` */
     isStatic?: boolean;
 
-    noTypes: boolean
+    noTypes?: boolean
 };
 
 /**
@@ -147,7 +147,6 @@ export class UniformGroup<UNIFORMS extends { [key: string]: UniformData } = any>
 
     /**
      * Create a new Uniform group
-     * @param uniformStructures - The structures of the uniform group
      * @param _uniformStructures
      * @param options - The optional parameters of this uniform group
      */

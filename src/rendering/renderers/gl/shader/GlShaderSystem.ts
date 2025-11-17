@@ -160,7 +160,7 @@ export class GlShaderSystem
             {
                 uniformStructures[i] ||= {
                     value: uniformValue,
-                    type: WEBGL_TO_WEBGPU_UNIFORM_MAP[uniformData[i].type],
+                    type: WEBGL_TO_WEBGPU_UNIFORM_MAP[uniformData[i].type as keyof typeof WEBGL_TO_WEBGPU_UNIFORM_MAP],
                     name: i,
                     size: 1
                 };

@@ -1,5 +1,5 @@
 {
-  "name": "pixi.js",
+  "name": "@play-co/pixi.js",
   "version": "8.14.1",
   "author": "PixiJS Team",
   "homepage": "http://pixijs.com/",
@@ -8,6 +8,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pixijs/pixijs.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   },
   "funding": {
     "type": "opencollective",
